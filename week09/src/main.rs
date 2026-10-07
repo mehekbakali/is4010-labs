@@ -1,15 +1,19 @@
+#[allow(dead_code)]
 fn add(a: i32, b: i32) -> i32 {
     a + b
 }
 
+#[allow(dead_code)]
 fn multiply(a: i32, b: i32) -> i32 {
     a * b
 }
 
+#[allow(dead_code)]
 fn is_even(n: i32) -> bool {
     n % 2 == 0
 }
 
+#[allow(dead_code)]
 fn max(a: i32, b: i32) -> i32 {
     if a > b {
         a
@@ -18,22 +22,27 @@ fn max(a: i32, b: i32) -> i32 {
     }
 }
 
+#[allow(dead_code)]
 fn square(n: i32) -> i32 {
     n * n
 }
 
+#[allow(dead_code)]
 fn reverse_string(s: &str) -> String {
     s.chars().rev().collect()
 }
 
+#[allow(dead_code)]
 fn concat_with_separator(words: &[&str], sep: &str) -> String {
     words.join(sep)
 }
 
+#[allow(dead_code)]
 fn find_max_in_vec(numbers: &[i32]) -> Option<i32> {
     numbers.iter().copied().max()
 }
 
+#[allow(dead_code)]
 fn count_evens(numbers: &[i32]) -> usize {
     numbers.iter().filter(|&&n| n % 2 == 0).count()
 }

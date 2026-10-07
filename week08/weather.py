@@ -2,8 +2,8 @@ import argparse
 import os
 import sys
 
-from favorites import FavoritesManager
-from weather_api import WeatherAPI, format_current_weather, format_forecast
+from .favorites import FavoritesManager
+from .weather_api import WeatherAPI, format_current_weather, format_forecast
 
 
 FAVORITES_FILE = "week08/favorites.json"
@@ -16,7 +16,7 @@ def load_api_key():
         return api_key
 
     try:
-        import config
+        from . import config
         return config.WEATHER_API_KEY
     except (ImportError, AttributeError):
         return None
@@ -52,7 +52,7 @@ def build_parser():
     return parser
 
 
-def main(argv=None) -> int:
+def main(argv=None):
     parser = build_parser()
     args = parser.parse_args(argv)
 

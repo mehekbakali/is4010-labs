@@ -1,4 +1,42 @@
-// Week 09: Rust basics
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+fn multiply(a: i32, b: i32) -> i32 {
+    a * b
+}
+
+fn is_even(n: i32) -> bool {
+    n % 2 == 0
+}
+
+fn max(a: i32, b: i32) -> i32 {
+    if a > b {
+        a
+    } else {
+        b
+    }
+}
+
+fn square(n: i32) -> i32 {
+    n * n
+}
+
+fn reverse_string(s: &str) -> String {
+    s.chars().rev().collect()
+}
+
+fn concat_with_separator(words: &[&str], sep: &str) -> String {
+    words.join(sep)
+}
+
+fn find_max_in_vec(numbers: &[i32]) -> Option<i32> {
+    numbers.iter().copied().max()
+}
+
+fn count_evens(numbers: &[i32]) -> usize {
+    numbers.iter().filter(|&&n| n % 2 == 0).count()
+}// Week 09: Rust basics
 //
 // Implement each function below so that the tests at the bottom of this file pass.
 // Run your tests with: cargo test
